@@ -1,4 +1,4 @@
-/**
+if(typeof __RELATIVIZE_PREFIX__ === 'undefined'){__RELATIVIZE_PREFIX__=''}/**
  * Welcome to your Workbox-powered service worker!
  *
  * You'll need to register this file in your web app and you should
@@ -26,34 +26,37 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-c01e3ac9a4a5a272d09d.js"
+    "url": "webpack-runtime-08f78d922af183089659.js"
   },
   {
-    "url": "styles.7ffb77565aba9a96cfcd.css"
+    "url": "styles.18eaecc9cef9b42195b3.css"
   },
   {
-    "url": "styles-8def39e4520d424c7ed8.js"
+    "url": "styles-4964acbcdac2881f748c.js"
   },
   {
-    "url": "app-470fde2a254dae6644ce.js"
+    "url": "app-7818b909083e668d02e0.js"
   },
   {
-    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-3fbffbca62349e6f2f3b.js"
+    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-0f1a6ceb451254786b9f.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "0cfe48e82ded03c55ee43d09265d0732"
+    "revision": "95116b3759ece1a20e078622f561c1e0"
   },
   {
-    "url": "4-8829c3cf18e50abe5e96.js"
+    "url": "component---node-modules-carrotsearch-gatsby-plugin-apidocs-dist-templates-documentation-page-js-d463aab6634639c62088.js"
+  },
+  {
+    "url": "5-290dc4d56f4dcb8abc47.js"
   },
   {
     "url": "page-data/404.html/page-data.json",
-    "revision": "12d14ffc57806a173b79a27e4e4e9403"
+    "revision": "2cef62fe97e0c776d49771daefa9fed7"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "add8b0c6fb11ea7edb564baf661bb16e"
+    "revision": "f60d2463abc8ec56ed87b2746098313e"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
@@ -75,7 +78,7 @@ const navigationRoute = new workbox.routing.NavigationRoute(({ event }) => {
   return idbKeyval.get(WHITELIST_KEY).then((customWhitelist = []) => {
     // Respond with the offline shell if we match the custom whitelist
     if (customWhitelist.includes(pathname)) {
-      const offlineShell = `/apidocs/offline-plugin-app-shell-fallback/index.html`
+      const offlineShell = `/__RELATIVIZE_PREFIX__/offline-plugin-app-shell-fallback/index.html`
       const cacheName = workbox.core.cacheNames.precache
 
       return caches.match(offlineShell, { cacheName }).then(cachedResponse => {
@@ -147,7 +150,7 @@ const messageApi = {
 
     pathnames = pathnames.map(({ pathname, includesPrefix }) => {
       if (!includesPrefix) {
-        return `/apidocs${pathname}`
+        return `/__RELATIVIZE_PREFIX__${pathname}`
       } else {
         return pathname
       }
