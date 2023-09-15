@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---gatsby-theme-apidocs-templates-documentation-page-js",
-    "path": "/examples/html/",
-    "result": {"data":{"html":{"frontmatter":{"id":"html","title":""},"html":"","tableOfContents":[]}},"pageContext":{"slug":"/examples/html/"}},
-    "staticQueryHashes": ["1164750013"]}
+{"componentChunkName":"component---gatsby-theme-apidocs-templates-documentation-page-js","path":"/examples/html/","result":{"data":{"site":{"siteMetadata":{"title":"APIdocs documentation","description":"APIdocs is an opinionated Gatsby template for writing technical documentation. Clone, customize and start documenting.","lang":"en","indexAlias":"/hello-apidocs/"}},"html":{"frontmatter":{"id":"html","title":""},"html":"","tableOfContents":[]}},"pageContext":{"slug":"/examples/html/"}},"staticQueryHashes":["2081922839"]}
